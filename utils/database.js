@@ -11,7 +11,8 @@ export const connectToDB = async () => {
     }
 
     try {
-        await mongoose.connect(process.env.MONGOBD_URI, {
+        await mongoose.connect(process.env.MONGODB_URI
+            , {
             dbName: "share",
             useNewUrlParser: true,
             useUnifiedTopology: true,

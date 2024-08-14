@@ -9,7 +9,7 @@ const nextConfig = {
             {
               protocol: 'https',
               hostname: 'lh3.googleusercontent.com',
-              port: '', // Leave this empty if no specific port is required
+              port: '', // Leave this empty if no specific port is require  
               pathname: '/**', // Allow all paths
             },
           ],
@@ -24,3 +24,4 @@ const nextConfig = {
 };
 
 export default nextConfig;
+
