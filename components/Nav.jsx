@@ -49,7 +49,7 @@ const Nav = () => {
               Create Post
             </Link>
             <button type='button' onClick={sigOut}
-            className='black_btn'>
+            className='outline_btn'>
               Sign Out
             </button>
             <Link href='/profile'>
