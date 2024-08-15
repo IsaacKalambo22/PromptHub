@@ -3,7 +3,7 @@
 import {useEffect, useState} from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import {useSession, getProviders, signIn, sigOut} from 'next-auth/react';
+import {useSession, getProviders, signIn, signOut} from 'next-auth/react';
 
 const Nav = () => {
 
@@ -45,13 +45,18 @@ const Nav = () => {
         {session?.user ? (
           // if the the user is logged in then it must show them the create post and sign out button
           <div className='flex gap-3 md:gap-5'>
-            <Link href='/create prompt' className='black_btn'>
+            <Link href='/create-prompt' className='black_btn'>
               Create Post
             </Link>
-            <button type='button' onClick={sigOut}
-            className='outline_btn'>
-              Sign Out
-            </button>
+            
+             <button 
+                type='button' 
+                onClick={signOut}
+                className='outline_btn'>
+                  Sign Out
+              </button>
+          
+                         
             <Link href='/profile'>
               <Image 
                 src={session.user.image}
@@ -113,7 +118,7 @@ const Nav = () => {
                     type='button'
                     onClick={() => {
                       setToggleDropdown(false);
-                      sigOut();                   
+                      signOut();                   
                      }}
                      className="mt-5 w-full black_btn"
                   >
