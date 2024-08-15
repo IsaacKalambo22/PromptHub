@@ -5,17 +5,19 @@ let isConnected = false; // track the connection
 export const connectToDB = async () => {
     mongoose.set('strictQuery', true);
 
-    if(isConnected) {
-        console.log('MongoDB is already connected')
+    if (isConnected) {
+        console.log('MongoDB is already connected');
         return;
     }
 
     try {
         await mongoose.connect(process.env.MONGODB_URI, {
             dbName: "share",
-            useNewUrlParser: true,
-            useUnifiedTopology: true,
-        })
+            // The following options are now default behavior and are not needed:
+            // useNewUrlParser: true,
+            // useUnifiedTopology: true,
+        });
+
         isConnected = true;
         console.log("MongoDB connected");
     } catch (error) {
