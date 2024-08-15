@@ -35,3 +35,14 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 # PromptHub
+ 
+[] Create a Post
+[] Edit and Update the post
+[] Copy the post
+[] View your profile
+[] Implementation of Search
+   - Search by prompt
+   - Search by tag
+   - Search by username
+[] Implementation of Click on tag
+[] Implementation of View other profiles
