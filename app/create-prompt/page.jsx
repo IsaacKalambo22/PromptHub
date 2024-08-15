@@ -29,7 +29,7 @@ const CreatePrompt = () => {
             })
 
             if(response.ok){
-                Router.push('/');
+                router.push('/');
             }
         } catch (error) {
             console.log(error);
